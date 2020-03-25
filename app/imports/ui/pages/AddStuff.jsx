@@ -16,6 +16,7 @@ const formSchema = new SimpleSchema({
     allowedValues: ['excellent', 'good', 'fair', 'poor'],
     defaultValue: 'good',
   },
+  Value: Number,
 });
 
 /** Renders the Page for adding a document. */
@@ -48,6 +49,7 @@ class AddStuff extends React.Component {
                 <TextField name='name'/>
                 <NumField name='quantity' decimal={false}/>
                 <SelectField name='condition'/>
+                <NumField name='Value' decimal={false}/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
